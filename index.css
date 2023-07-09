@@ -64,6 +64,11 @@ a:hover {
     text-decoration: underline;
 }
 
+br {
+    display: block;
+    margin: 10px 0;
+ }
+
 #headers {
     display: flex;
     align-items: center;
