@@ -13,15 +13,30 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin-top: 50px;
+    user-select: none;
 }
 
 h1, h2 {
     color: orange;
+    transition: .5s; /* Animation */
 }
 
 h1 {
     font-size: 5ch;
     margin: 0;
+}
+
+h1:hover, h2:hover, p:hover {
+    cursor: default;
+}
+
+h1:hover {
+    text-shadow: 0 0 4px orange
+
+}
+
+h2:hover {
+    text-shadow: 0 0 2px orange
 }
 
 #content {
