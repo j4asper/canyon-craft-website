@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+        <link rel="icon" type="ico" href="images/favicon.ico">
+        <title>Canyon Craft</title>
+    </head>
+
+    <body>
+        <div id="headers">
+            <h1>Canyon Craft</h1>
+            <h2><span id="player-count" style="color: white;">0</span> Player(s) Online</h2>
+        </div>
+
+        <div id="content-bg">
+            <div id="content">
+                <p>
+                    Canyon Craft SMP, an 18+ whitelisted survival server. Brand new, starting at Season 1. If you are under the age of 18, you might still have a chance to get whitelisted, but your application need to show that you are mature enough. Nothing on the server is built in creative, items will not be spawned in. Everything is completely community driven.
+                </p>
+
+                <p>If you want to join the server, head over to our <span style="color: #5865F2;"><a href="https://discord.gg/npaMqyDh8R" target="_blank">Discord</a></span> and apply to get whitelisted!</p>
+
+                <p>Click on the map below, to see our world!</p>
+
+            </div>
+        </div>
+
+        <div id="map">
+            <a href="https://map.canyoncraft.net"><img src="images/map.png" alt="Minecraft Map Icon"></a>
+        </div>
+
+    </body>
+
+    <script>
+        // Source from https://cindr.org/how-to-get-a-minecraft-servers-player-count-motd-and-status-using-javascript/
+        function initServerData(serverIp,serverPort){
+            fetch('https://mcapi.us/server/status?ip='+serverIp+'&port='+serverPort)
+            .then(response => response.json())
+            .then(data => handleServerStatus(data));
+      
+            function handleServerStatus(data){
+                if(data.status=='error'){
+                    console.log(data.error);
+                    return false;
+                }
+    
+                const playerCounter = document.getElementById("player-count");
+                playerCounter.innerHTML = data.players.now;
+            } 
+        }
+        initServerData("canyoncraft.net","25565");
+    </script>
+
+</html>

@@ -1,0 +1,92 @@
+* {
+    font-family: 'Minecraft', sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('images/canyoncraft.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+h1, h2 {
+    color: orange;
+}
+
+h1 {
+    font-size: 5ch;
+    margin: 0;
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+p {
+    font-size: larger;
+}
+
+img {
+    width: 5%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#headers {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#content-bg {
+    background-color: rgba(255, 255, 255, 0.449);
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#map {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+img {
+    margin-top: 50px;
+    height: 100px;
+    width: auto;
+    transition: transform .2s; /* Animation */
+}
+
+img:hover {
+    transform: scale(1.5);
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    #content-bg {
+        margin-left: 3%;
+        margin-right: 3%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+  }
