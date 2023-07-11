@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Minecraft server, Survival server, Community-driven, Dynamic map, Whitelisted server, Mature community, Minecraft adventure, Multiplayer server, Minecraft version 1.20, Whitelist application, Interactive map, Minecraft gameplay, Creative building, Player-driven experience, Engaging multiplayer, Gaming community, Minecraft exploration, Vast landscapes, Social Minecraft server, Active player community">
+        <meta name="description" content="Embark on a thrilling Minecraft journey unlike any other on Canyon Craft! Immerse yourself in a vibrant survival server running Minecraft version 1.20 that puts the power in the hands of the community.">
         <link rel="stylesheet" href="index.css">
         <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
         <link rel="icon" type="ico" href="images/favicon.ico">
-        <title>Canyon Craft</title>
+        <title>Canyon Craft - Minecraft Survival Server</title>
     </head>
 
     <body>
@@ -21,7 +23,7 @@
                 <p>
                     Discover Canyon Craft: The Ultimate Minecraft Adventure!<br>
 
-                    🌎 Dynamic Map, endless exploration! Visit map below.<br>
+                    🌎 Dynamic Map, endless exploration! Visit the world map below.<br>
 
                     🔥 Fully Community Driven: Shape the server's future with us.<br>
 
@@ -41,24 +43,6 @@
 
     </body>
 
-    <script>
-        // Source from https://cindr.org/how-to-get-a-minecraft-servers-player-count-motd-and-status-using-javascript/
-        function initServerData(serverIp,serverPort){
-            fetch('https://mcapi.us/server/status?ip='+serverIp+'&port='+serverPort)
-            .then(response => response.json())
-            .then(data => handleServerStatus(data));
-      
-            function handleServerStatus(data){
-                if(data.status=='error'){
-                    console.log(data.error);
-                    return false;
-                }
-    
-                const playerCounter = document.getElementById("player-count");
-                playerCounter.innerHTML = data.players.now;
-            } 
-        }
-        initServerData("canyoncraft.net","25565");
-    </script>
+    <script src="online-players.js"></script>
 
 </html>
